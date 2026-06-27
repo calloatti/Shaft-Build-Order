@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>shaftbuildorder</AssemblyName>
+    <RootNamespace>Calloatti.ShaftBuildOrder</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="CommonModSettings.props" />
+  
+  <ItemGroup>
+    <Publicize Include="Timberborn.Terraforming" />
+    <Publicize Include="Timberborn.ModularShafts" />
+    <Publicize Include="Timberborn.BlockingSystem" />
+    <Publicize Include="Timberborn.BlockSystem" />
+    <Publicize Include="Timberborn.BuilderHubSystem" />
+  </ItemGroup>
+
+</Project>
