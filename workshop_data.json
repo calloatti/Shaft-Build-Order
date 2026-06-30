@@ -2,11 +2,12 @@
   "ItemId": "3752955145",
   "Name": "Shaft Build Order",
   "Visibility": "Public",
-  "UpdateDescription": true,
-  "UpdateVisibility": true,
-  "UpdatePreview": true,
+  "UpdateDescription": false,
+  "UpdateVisibility": false,
+  "UpdatePreview": false,
   "UpdateTags": true,
   "Tags": [
+    "Update 1.1",
     "Update 1.0",
     "Quality of life"
   ]
