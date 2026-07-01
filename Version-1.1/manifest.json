@@ -2,7 +2,7 @@
   "Id": "Calloatti.ShaftBuildOrder",
   "Name": "Shaft Build Order",
   "Version": "1.1.0",
-  "MinimumGameVersion": "1.0.0.0",
+  "MinimumGameVersion": "1.1.0.0",
   "Author": "Calloatti",
   "Description": "Forces power shafts to be built sequentially in the direction they are placed, featuring a directional arrow overlay during placement.",
   "RequiredMods": [
