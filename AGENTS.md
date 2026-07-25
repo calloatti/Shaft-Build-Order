@@ -40,7 +40,17 @@ Forces power shafts to be built sequentially in the direction they are placed. W
 - **Shift detection happens once** at placement time (`OnPostPlacementChanged`). The flag is persisted, so build order survives save/load.
 - **No localization file** — status toggle uses a hardcoded English string (`"DirectionalBlocking"` key at `StatusToggle.CreateNormalStatus`). No `.csv` locale files present.
 - **No blueprints, assets, or UI files** — the arrow is created programmatically (procedural mesh + `Sprites/Default` shader).
-- **v1.0 vs v1.1 difference:** v1.0 targets `MinimumGameVersion 1.0.0.0` and uses `IPreviewStateListener` + `IStartableComponent`. v1.1 targets `MinimumGameVersion 1.1.0.0` and uses `IInitializablePreview` + `IInitializableEntity` (the Timberborn API changed between versions).
+- **Navigation Range Extension:** When build order mode is active on an unfinished shaft, the shaft adds `IsRoad=true` `NavMeshEdge`s to its NavMeshObject, registering its coordinates as road nav mesh nodes. This extends the road spill flow field through the shaft chain, letting builders reach far tunnel segments. Edges are removed when the shaft finishes.
+- **v1.0 vs v1.1 differences:**
+
+  | Aspect | v1.0 | v1.1 |
+  |--------|------|------|
+  | Min game version | `1.0.0.0` | `1.1.0.0` |
+  | Blocker init | `IStartableComponent` + `Start()` | `IInitializableEntity` + `InitializeEntity()` |
+  | Visualizer lifecycle | `IPreviewStateListener` + `IUpdatableComponent` (has `Update()`) | `IInitializablePreview` + `IInitializableEntity` (no Update loop) |
+  | Shared logic | Identical `OnPostPlacementChanged`, `OnEnterUnfinishedState`, `OnEnterFinishedState`, save/load, `ShouldBlockBuilders` | Same |
+
+  API changes in Timberborn 1.1: `IStartableComponent` → `IInitializableEntity`, `IPreviewStateListener` → `IInitializablePreview`, `IUpdatableComponent` dropped (components enable/disable via `EnableComponent()`/`DisableComponent()`).
 
 ## Save/Load
 
