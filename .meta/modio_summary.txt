@@ -1,0 +1,1 @@
+Forces power shafts to be built sequentially in the direction they are placed, featuring a directional arrow overlay during placement.

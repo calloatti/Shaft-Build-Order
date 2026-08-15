@@ -1,0 +1,23 @@
+Forces power shafts to be built sequentially in the direction they are placed, featuring a directional arrow overlay during placement.
+
+### How to use it:
+Simply hold down the [Shift] key while dragging or placing your power shafts. You will see yellow arrows appear on the blueprints, indicating the direction of the build queue. Release the Shift key to return to normal, unordered placement. If you want to place only one shaft, you can rotate the direction of the arrow with R
+
+### How it works:
+To maximize your colony's efficiency, this mod intelligently splits how your beavers interact with the queue:
+Materials will be delivered to the construction sites regardless of the build order.
+Builders will strictly obey the build order. They will patiently wait at the front of the line and only hammer the next shaft in the sequence once the previous one is 100% complete.
+
+### Path feature:
+Unfinished power shafts placed with build order will have a path under them until finished, so you can place a long line, with the last shaft connected to a path, and beavers will be able to reach and build all the shafts.
+
+---
+
+[Mods on Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3682179025)
+
+[Mods on mod-dot-io](https://mod.io/u/calloatti/?_sort=name)
+
+[Mods on Github](https://github.com/search?q=owner%3Acalloatti+sort%3Aname-asc+%22Timberborn+Mod%22&type=repositories)
+
+[Mod zip files](https://github.com/calloatti/ModZips)
+
