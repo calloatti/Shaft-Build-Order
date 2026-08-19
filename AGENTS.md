@@ -63,3 +63,8 @@ Forces power shafts to be built sequentially in the direction they are placed. W
 - Project file: `Version-1.{0,1}/ShaftBuildOrder.csproj`
 - Mod v1.0.0 / v1.1.0, requires Harmony 2.4.1
 - No test framework present
+
+## Hard Rule
+DO NOT EVER TOUCH THE DEPLOY FOLDER.
+
+BUILD DOES EVERYTHING, NEVER EVER MESS WITH THE DEPLOY PROCESS.
